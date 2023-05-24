@@ -5,11 +5,12 @@ on:
   push:
     branches: ["main"]
 
-permissions: write-all
+permissions: 
+  contents: write
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -24,5 +25,5 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Train
         run: |
-          python -m Anomaly-train.py
-          python -m Signature-train-test.py
+          sudo python -m Anomaly-train.py
+          sudo python -m Signature-train-test.py
