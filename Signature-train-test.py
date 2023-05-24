@@ -51,8 +51,8 @@ print(model)
 # make predictions
 expected = testlabel
 predicted = model.predict(testdata)
-np.savetxt('res/predictedDT.txt', predicted, fmt='%01d')
-np.savetxt('res/expectedDT.txt', expected, fmt='%01d')
+np.savetxt('./res/predictedDT.txt', predicted, fmt='%01d')
+np.savetxt('./res/expectedDT.txt', expected, fmt='%01d')
 # summarize the fit of the model
 accuracy = accuracy_score(expected, predicted)
 recall = recall_score(expected, predicted, average="binary")

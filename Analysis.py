@@ -9,13 +9,13 @@ import pylab as pl
 import numpy as np
 import matplotlib.colors as mcolors
 # Read the data
-with open('expectedsig.txt', 'r') as infile:
+with open('./expectedsig.txt', 'r') as infile:
     true_values = [int(i) for i in infile]
-with open('predictedsig.txt', 'r') as infile:
+with open('./predictedsig.txt', 'r') as infile:
     predictions = [int(i) for i in infile]
-with open('expectedano.txt', 'r') as infile:
+with open('./expectedano.txt', 'r') as infile:
     true_values1 = [int(i) for i in infile]
-with open('predictedano.txt', 'r') as infile:
+with open('./predictedano.txt', 'r') as infile:
     predictions1 = [int(i) for i in infile]
 
 # Make confusion matrix

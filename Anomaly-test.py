@@ -64,7 +64,7 @@ cnn.add(Dropout(0.1))
 cnn.add(Dense(1, activation="sigmoid"))
 
 # Change this for the path of the weights
-cnn.load_weights("results/cnn3results/checkpoint-04.hdf5")
+cnn.load_weights("./content/results/cnn3results/checkpoint-04.hdf5")
 
 
 cnn.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
@@ -76,8 +76,8 @@ accuracy = accuracy_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred, average="binary")
 precision = precision_score(y_test, y_pred, average="binary")
 f1 = f1_score(y_test, y_pred, average="binary")
-np.savetxt('res/expected3.txt', y_test, fmt='%01d')
-np.savetxt('res/predicted3.txt', y_pred, fmt='%01d')
+np.savetxt('./res/expected3.txt', y_test, fmt='%01d')
+np.savetxt('./res/predicted3.txt', y_pred, fmt='%01d')
 
 print("confusion matrix")
 print("----------------------------------------------")
