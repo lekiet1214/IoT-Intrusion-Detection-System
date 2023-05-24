@@ -11,6 +11,7 @@ import pandas as pd
 from keras.layers import Dense, Dropout
 from keras.models import Sequential
 import numpy as np
+import tensorflow as tf
 np.random.seed(1337)  # for reproducibility
 
 
