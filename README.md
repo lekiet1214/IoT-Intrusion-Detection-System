@@ -21,3 +21,7 @@ seeing a new input packet it will compare the nature of the packet with the natu
 packet. If the difference is found to be large(beyond some threshold) then the packet will be
 classified as an anomaly or else, it will be labeled as a normal packet.
 This way, we aim to set up an efficient IDS for the IoT networks.
+
+[![Dependencies check](https://github.com/lekiet1214/IoT-Intrusion-Detection-System/actions/workflows/Dependencies.yml/badge.svg)](https://github.com/lekiet1214/IoT-Intrusion-Detection-System/actions/workflows/Dependencies.yml)
+
+[![Train](https://github.com/lekiet1214/IoT-Intrusion-Detection-System/actions/workflows/Train.yaml/badge.svg)](https://github.com/lekiet1214/IoT-Intrusion-Detection-System/actions/workflows/Train.yaml)
