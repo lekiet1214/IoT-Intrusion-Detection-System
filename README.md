@@ -17,13 +17,12 @@ Internet of things (IoT) is a promising solution to connect and access every dev
 ## Citation:
 
 This code is based on the following paper. If you use this code for your research, please consider citing the following paper.
-````
+```
 @article{https://doi.org/10.36548/jismac.2020.4.002}
 author = {Dr. S. Smys, Dr. Abul Basar, Dr. Haoxiang Wang}
 
-    ```
+```
 
 [![Dependencies check](https://github.com/lekiet1214/IoT-Intrusion-Detection-System/actions/workflows/Dependencies.yml/badge.svg)](https://github.com/lekiet1214/IoT-Intrusion-Detection-System/actions/workflows/Dependencies.yml)
 
 [![Train](https://github.com/lekiet1214/IoT-Intrusion-Detection-System/actions/workflows/Train.yaml/badge.svg)](https://github.com/lekiet1214/IoT-Intrusion-Detection-System/actions/workflows/Train.yaml)
-````
