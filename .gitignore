@@ -1,3 +1,5 @@
 # ignore runtime directory
 content/*
 *.ipynb
+res/*
+```

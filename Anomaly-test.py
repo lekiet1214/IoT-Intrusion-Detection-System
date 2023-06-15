@@ -64,18 +64,27 @@ cnn.add(Dropout(0.1))
 cnn.add(Dense(1, activation="sigmoid"))
 
 # Change this for the path of the weights
-cnn.load_weights("./content/results/cnn3results/checkpoint-04.hdf5")
+cnn.load_weights("./content/results/cnn3results/cnn_model.hdf5")
 
 
 cnn.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 loss, accuracy = cnn.evaluate(X_test, y_test)
 print("\nLoss: %.2f, Accuracy: %.2f%%" % (loss, accuracy*100))
 
-y_pred = cnn.predict_classes(X_test)
+
+y_pred=cnn.predict(X_test) 
+y_pred=np.argmax(y_pred,axis=1)
 accuracy = accuracy_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred, average="binary")
 precision = precision_score(y_test, y_pred, average="binary")
 f1 = f1_score(y_test, y_pred, average="binary")
+import os
+if not os.path.exists('./res'):
+    os.makedirs('./res')
+    f = open("./res/expected3.txt", "x")
+    f.close()
+    f = open ('./res/predicted3.txt', "x")
+    f.close()
 np.savetxt('./res/expected3.txt', y_test, fmt='%01d')
 np.savetxt('./res/predicted3.txt', y_pred, fmt='%01d')
 
