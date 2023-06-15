@@ -9,8 +9,8 @@ from sklearn.metrics import (
     precision_score, recall_score, f1_score, accuracy_score)
 from sklearn.preprocessing import LabelEncoder
 
-traindata = pd.read_csv('./UNSW_NB15_training_set.csv', header=0, sep=';')
-testdata = pd.read_csv('./UNSW_NB15_testing_set.csv', header=0, sep=';')
+traindata = pd.read_csv('./UNSW_NB15_training_set.csv', header=0, sep=';', low_memory=False)
+testdata = pd.read_csv('./UNSW_NB15_testing_set.csv', header=0, sep=';', low_memory=False)
 
 for column in traindata.columns:
     if traindata[column].dtype == type(object):

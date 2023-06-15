@@ -15,7 +15,7 @@ import tensorflow as tf
 np.random.seed(1337)  # for reproducibility
 
 
-testdata = pd.read_csv('./UNSW_NB15_testing_set.csv', header=0, sep=';')
+testdata = pd.read_csv('./UNSW_NB15_testing_set.csv', header=0, sep=';', low_memory=False)
 # traindata=pd.read_csv('./UNSW_NB15_training_set.csv', header=0, sep=';')
 
 # for column in traindata.columns:

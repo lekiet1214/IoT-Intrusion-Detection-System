@@ -14,8 +14,8 @@ np.random.seed(1337)  # for reproducibility
 
 
 # import dataset, first row is header
-traindata = pd.read_csv('./UNSW_NB15_training_set.csv', header=0, sep=';')
-testdata = pd.read_csv('./UNSW_NB15_testing_set.csv', header=0, sep=';')
+traindata = pd.read_csv('./UNSW_NB15_training_set.csv', header=0, sep=';', low_memory=False)
+testdata = pd.read_csv('./UNSW_NB15_testing_set.csv', header=0, sep=';', low_memory=False)
 # traindata.columns = traindata.iloc[0]
 # traindata = traindata[1:]
 print(traindata.shape)
