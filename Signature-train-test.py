@@ -51,6 +51,8 @@ print(model)
 # make predictions
 expected = testlabel
 predicted = model.predict(testdata)
+predictedprob = model.predict_proba(testdata)
+np.savetxt('./res/predictedDTprob.txt', predictedprob, fmt='%01d')
 np.savetxt('./res/predictedDT.txt', predicted, fmt='%01d')
 np.savetxt('./res/expectedDT.txt', expected, fmt='%01d')
 # summarize the fit of the model

@@ -20,7 +20,7 @@ testdata = pd.read_csv('./UNSW_NB15_testing_set.csv', header=0, sep=';', low_mem
 # traindata = traindata[1:]
 print(traindata.shape)
 print(testdata.shape)
-
+print(list(traindata.columns))
 for column in traindata.columns:
     try:
         if traindata[column].dtype == type(object):

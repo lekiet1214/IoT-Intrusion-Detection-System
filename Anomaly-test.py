@@ -72,7 +72,16 @@ loss, accuracy = cnn.evaluate(X_test, y_test)
 print("\nLoss: %.2f, Accuracy: %.2f%%" % (loss, accuracy*100))
 
 
-y_pred=cnn.predict(X_test) 
+y_pred=cnn.predict(X_test)
+
+predicted_labels = np.argmax(y_pred, axis=1)
+max_probabilities = np.max(y_pred, axis=1)
+with open('./res/predict2.txt', 'w') as file:
+    for label, prob in zip(predicted_labels, max_probabilities):
+        line = f"Predicted label: {label}, Probability: {prob}\n"
+        file.write(line)
+
+
 y_pred=np.argmax(y_pred,axis=1)
 accuracy = accuracy_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred, average="binary")
